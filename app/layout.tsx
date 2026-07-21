@@ -1,6 +1,11 @@
 
 import "./globals.css";
+import { Roboto, EB_Garamond } from "next/font/google";
+import { cn } from "@/lib/utils";
 
+const ebGaramondHeading = EB_Garamond({subsets:['latin'],variable:'--font-heading'});
+
+const roboto = Roboto({subsets:['latin'],variable:'--font-sans'});
 
 
 export default function RootLayout({
@@ -11,7 +16,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={cn("h-full antialiased", "font-sans", roboto.variable, ebGaramondHeading.variable)}
     >
       <body className="min-h-full flex flex-col">
         {children}
