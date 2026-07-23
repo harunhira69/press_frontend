@@ -3,6 +3,7 @@ import "./globals.css";
 import { Roboto, EB_Garamond } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
+import { Navbar } from "@/components/shared/navbar";
 
 const ebGaramondHeading = EB_Garamond({subsets:['latin'],variable:'--font-heading'});
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
 
 
-
+     <Navbar/>
         <Toaster position="top-right" richColors/>        
         {children}
         </body>

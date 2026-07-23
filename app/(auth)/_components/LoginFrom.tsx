@@ -14,7 +14,7 @@ const LoginFrom = () => {
     if(!state) return;
 
   if(state.success){
-      toast.error(state.message || "User login successfully")
+      toast.error(state.message || "User login")
   }
 
    if(!state.success){
