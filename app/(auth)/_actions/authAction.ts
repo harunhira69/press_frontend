@@ -6,7 +6,7 @@ import { redirect } from "next/navigation"
 
 
 type LoginState = {
-      sucess: true,
+      success: true,
     statusCode: number,
     message: string,
     data:{
@@ -36,7 +36,7 @@ export const loginAction = async(prevState:LoginState,formData:FormData)=>{
 
   const result = await res.json();
 
-  if(result.sucess){
+  if(result.success){
     const cookieStore = await cookies()
 
     cookieStore.set("accessToken",result.data.accessToken,{
